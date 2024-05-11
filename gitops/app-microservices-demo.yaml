@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: microservices-demo 
+  namespace: argocd
+spec:
+  project: k8s-project
+  source:
+    repoURL: https://github.com/GoogleCloudPlatform/microservices-demo.git
+    targetRevision: HEAD
+    path: release/
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: app
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
