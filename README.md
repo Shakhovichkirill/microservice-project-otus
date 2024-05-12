@@ -18,3 +18,21 @@ URL project : http://kvosems.ru
    ```
    terraform apply
    ```
+## Работа с кластером k8s
+1. Установка yc cli [инструкция](https://yandex.cloud/ru/docs/cli/operations/install-cli)
+2. Установка kubectl [инструкция](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+3. Далее сконфигурируем конфиг файл для kubectl
+   ```
+   yc k8s cluster get-credentials k8s-project --folder-id <folder-id> --external
+   ```
+4. Проверка работы kubectl
+   ```
+   kubectl get nodes
+   ```
+5. Taint and labels для групп узлов infra
+   ```
+   kubectl taint nodes prod-awan-cl10l1bci20paorqmrpg node-role=k8s-project-infra:NoSchedule
+   kubectl label nodes prod-awan-cl10l1bci20paorqmrpg k8s-project-infra=true
+   ```
+   
+## ArgoCD
