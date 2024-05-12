@@ -6,9 +6,9 @@ metadata:
 spec:
   project: k8s-project
   source:
-    repoURL: https://github.com/GoogleCloudPlatform/microservices-demo.git
+    repoURL: https://github.com/Shakhovichkirill/microservice-project-otus.git
     targetRevision: HEAD
-    path: release/
+    path:     microservices-demo/release/
   destination:
     server: https://kubernetes.default.svc
     namespace: app

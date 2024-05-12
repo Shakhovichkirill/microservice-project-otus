@@ -12,7 +12,7 @@ spec:
 
   # Allow manifests to deploy from any Git repos
   sourceRepos:
-  - 'https://github.com/GoogleCloudPlatform/microservices-demo.git'
+  - 'https://github.com/Shakhovichkirill/microservice-project-otus.git'
 
   # Only permit applications to deploy to the guestbook namespace in the same cluster
   # Destination clusters can be identified by 'server', 'name', or both.
