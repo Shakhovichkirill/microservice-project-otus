@@ -8,4 +8,5 @@ URL project : http://kvosems.ru
 3. Конфигурация terraform:
 
    ```cluster.tf``` - описание конфигурации Managed Service for Kubernetes.
+   
    ```nodes_group.tf``` - описание конфигурации групп узлов worker node кластера k8s. 
