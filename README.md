@@ -7,6 +7,14 @@ URL project : http://kvosems.ru
 2. Далее необходимо подготовить Terrafrom к работе, выполнить это необходимо по следующей инструкции: [установка terraform](https://yandex.cloud/ru/docs/tutorials/infrastructure-management/terraform-quickstart#cli_1). Инструкция показывает об установке terraform, создании данных для аутентификации, настройки провайдера, конфигурации terraform.
 3. Конфигурация terraform:
 
-   ```cluster.tf``` - описание конфигурации Managed Service for Kubernetes.
+   ```terraform/cluster.tf``` - описание конфигурации Managed Service for Kubernetes.
    
-   ```nodes_group.tf``` - описание конфигурации групп узлов worker node кластера k8s. 
+   ```terraform/nodes_group.tf``` - описание конфигурации групп узлов worker node кластера k8s.
+5. Проверка созданной конфигурации:
+   ```
+   terraform plan
+   ```
+6. Применение созданной конфигурации:
+   ```
+   terraform apply
+   ```
